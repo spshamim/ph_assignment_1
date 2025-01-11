@@ -7,30 +7,28 @@
 
 body{
     font-family: Fira Sans;
-}
-
-header, main{
     background-color: rgba(14,14,14,0.03);
 }
 
 /* Navbar */
 
-nav{
+header nav{
     display: flex;
     justify-content: space-between;
-    /* background-color: antiquewhite; */
-    margin: 24px 160px;
+    margin: 0 auto;
     align-items: center;
     margin-bottom: 20px;
+    padding: 24px 0;
+    width: 1200px;
 }
 
-nav #nav-title{
+header nav #nav-title{
     font-size: 32px;
     font-weight: bold;
     color: #0E0E0E;
 }
 
-nav #signin-btn{
+header nav #signin-btn{
     border: 1px solid #006A50;
     padding: 10px 25px;
     border-radius: 8px;
@@ -39,55 +37,61 @@ nav #signin-btn{
     color: #006A50;
     cursor: pointer;
     background-color: white;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out; /* Additional - to enhance the hover effect */
+}
+
+header nav #signin-btn:hover{
+    background-color: #C6E4D6;
+    color: #006A50;
+    transform: scale(1.05);
 }
 
 /* Banner Section */
 
-.banner-container{
+header .banner-container{
     display: flex;
     justify-content: space-around;
     align-items: center;
     gap: 40px;
     background-color: #C6E4D6;
     border-radius: 24px;
-    margin: 0px 160px;
+    margin: 0 auto;
     width: 1200px;
-    margin-bottom: 80px;
 }
 
-.left{
+header .banner-container .left{
     display: flex;
     justify-content: start;
     flex-direction: column;
     align-items: start;
 }
 
-.right{
+header .banner-container .right{
     height: 450px;
     width: 380px;
 }
 
-.right img{
+header .banner-container .right img{
     width: 100%;
     height: auto;
     margin-top: 70px;
 }
 
-.banner-title{
+header .banner-container .left .banner-title{
     font-size: 22px;
     font-weight: 500px;
     color: rgba(14, 14, 14, 0.5);
     margin-bottom: 16px;
 }
 
-.banner-desc{
+header .banner-container .left .banner-desc{
     font-size: 50px;
     font-weight: 700;
     color:rgb(14, 14, 14);
     margin-bottom: 24px;
 }
 
-.banner-container .left #explore-btn{
+header .banner-container .left #explore-btn{
     border-radius: 8px;
     background: rgb(0, 106, 80);
     padding: 17px 34px;
@@ -96,6 +100,12 @@ nav #signin-btn{
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Additional - to enhance the hover effect */
+}
+
+header .banner-container .left #explore-btn:hover{
+    background-color: #004f3a;
+    transform: scale(1.05);
 }
 
 /* Section Pillars */
@@ -105,21 +115,22 @@ nav #signin-btn{
     font-size: 40px;
     font-weight: 700;
     color: rgb(14, 14, 14);
+    margin-top: 80px;
 }
 
-.pillars{
+main .pillars{
     width: 1200px;
-    margin: 80px 160px;
+    margin: 0 auto;
 }
 
-.card-container{
+main .pillars .card-container{
     display: flex;
     justify-content: space-between;
     gap: 24px;
     align-items: end;
 }
 
-.p-card{
+main .pillars .card-container .p-card{
     height: 240px;
     width: 250px;
     padding: 22px;
@@ -128,7 +139,7 @@ nav #signin-btn{
     border: 1px solid rgba(14, 14, 14, 0.15);
 }
 
-.card-title{
+main .pillars .card-container .p-card .card-title{
     margin-bottom: 12px;
     color: rgba(14, 14, 14, 0.8);
     font-family: Fira Sans;
@@ -136,13 +147,14 @@ nav #signin-btn{
     font-weight: 700;
 }
 
-.card-desc{
+main .pillars .card-container .p-card .card-desc{
     color: rgba(14, 14, 14, 0.6);
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400;
+    text-align: left;
 }
 
-.p-card img{
+main .pillars .card-container .p-card img{
     margin-bottom: 24px;
 }
 
@@ -150,14 +162,14 @@ nav #signin-btn{
 
 /* V Card Common */
 
-.v-card{
+main .vision .vision-container .v-card-container .v-card{
     padding: 24px;
     border-radius: 16px;
     width: 410px;
     height: 260px;
 }
 
-.lrn-btn{
+main .vision .vision-container .v-card-container .v-card .lrn-btn{
     border-radius: 8px;
     padding: 8px 17px;
     border: none;
@@ -165,16 +177,17 @@ nav #signin-btn{
     font-weight: 600;
     color: white;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Additional - to enhance the hover effect */
 }
 
 /* ------------- */
 
-.vision{
+main .vision{
     width: 1200px;
-    margin: 80px 160px;
+    margin: 0 auto;
 }
 
-.v-card-container{
+main .vision .vision-container .v-card-container{
     margin-top: 32px;
     display: flex;
     justify-content: space-around;
@@ -182,7 +195,7 @@ nav #signin-btn{
     align-items: end;
 }
 
-.v-card-title{
+main .vision .vision-container .v-card-container .v-card .v-card-title{
     margin-bottom: 12px;
     color: rgba(14, 14, 14, 0.8);
     font-family: Fira Sans;
@@ -190,48 +203,63 @@ nav #signin-btn{
     font-weight: 700;
 }
 
-.v-card-desc{
+main .vision .vision-container .v-card-container .v-card .v-card-desc{
     color: rgba(14, 14, 14, 0.6);
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 40px;
 }
 
-.b1{
+main .vision .vision-container .v-card-container .v-card a .b1{
     background-color: rgb(84, 144, 245);
 }
 
-.b2{
+main .vision .vision-container .v-card-container .v-card a .b1:hover{
+    background-color: rgb(50,110,200);
+    transform: scale(1.05);
+}
+
+main .vision .vision-container .v-card-container .v-card a .b2{
     background-color: rgb(9, 161, 92);
 }
 
-.b3{
+main .vision .vision-container .v-card-container .v-card a .b2:hover{
+    background-color: rgb(6,120,70);
+    transform: scale(1.05);
+}
+
+main .vision .vision-container .v-card-container .v-card a .b3{
     background-color: rgb(255, 194, 57);
 }
 
-.vc1{
+main .vision .vision-container .v-card-container .v-card a .b3:hover{
+    background-color: rgb(204,155,40);
+    transform: scale(1.05);
+}
+
+main .vision .vision-container .v-card-container .vc1{
     background: rgba(84, 144, 245, 0.2);
 }
 
-.vc2{
+main .vision .vision-container .v-card-container .vc2{
     background: rgb(198, 228, 214);
 }
 
-.vc3{
+main .vision .vision-container .v-card-container .vc3{
     background: rgb(247, 235, 207);
 }
 
-.v-card-container .vc2 .v-card-desc{
+main .vision .vision-container .v-card-container .vc2 .v-card-desc{
     margin-bottom: 60px;
 }
 
-.v-card-container .v-card img{
+main .vision .vision-container .v-card-container .v-card img{
     margin-bottom: 24px;
 }
 
 /* Quote part */
 
-.quote-container{
+main .vision .quote-container{
     position: relative;
     margin-top: 32px;
     padding: 45px 24px;
@@ -239,27 +267,27 @@ nav #signin-btn{
     border: 1px solid rgba(14, 14, 14, 0.15);
 }
 
-.quote-container .said-what{
+main .vision .quote-container .said-what{
     margin-bottom: 12px;
     font-size: 16px;
     font-weight: 400;
     color: rgba(14, 14, 14, 0.6);
 }
 
-.quote-container .who{
+main .vision .quote-container .who{
     margin-bottom: 4px;
     font-size: 20px;
     font-weight: 600;
     color: rgba(14, 14, 14, 0.9);
 }
 
-.quote-container .desig{
+main .vision .quote-container .desig{
     font-size: 16px;
     font-weight: 400;
     color: rgba(14, 14, 14, 0.5);
 }
 
-.quote-container img{
+main .vision .quote-container img{
     position: absolute;
     bottom: 123px;
     right: 1110px;
@@ -268,24 +296,24 @@ nav #signin-btn{
 
 /* Opinion Section */
 
-.opinion{
+main .opinion{
     width: 1200px;
-    margin: 80px 160px;
+    margin: 0 auto;
 }
 
-.op-table-container{
+main .opinion .op-table-container{
     background-color: white;
     border-radius: 16px;
     padding: 32px;
 }
 
-.op-table-container table, th, td{
+main .opinion .op-table-container table, th, td{
     width: 100%;
     border-collapse: collapse;
     border: 1px solid rgba(14,14,14,0.3);
 }
 
-.op-table-container table th{
+main .opinion .op-table-container table th{
     font-size: 18px;
     font-weight: 600;
     color: rgba(14, 14, 14);
@@ -293,39 +321,47 @@ nav #signin-btn{
     border: none;
 }
 
-.op-table-container table td{
+main .opinion .op-table-container table td{
     font-size: 14px;
     font-weight: 600;
     color: rgba(14, 14, 14);
 }
 
-.op-table-container table th, .cell-ques{
+main .opinion .op-table-container table th, .cell-ques{
     padding: 24px;
     text-align: left;
     white-space: nowrap;
 }
 
-.op-table-container table tbody .cell-ans{
+main .opinion .op-table-container table tbody .cell-ans{
     text-align: center;
 }
 
-.op-table-container table tbody .cell-ans select, option{
+main .opinion .op-table-container table tbody .cell-ans select, option{
     padding: 8px;
     background-color: #C6E4D6;
     color: rgba(14, 14, 14);
     border-radius: 4px;
     border: 1px solid rgb(14, 14, 14);
     font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Additional - to enhance the hover effect */
+}
+
+main .opinion .op-table-container table tbody .cell-ans select:hover{
+    background-color: #004f3ad0;
+    color: white;
+    transform: scale(1.05);
 }
 
 /* News Section */
 
-.news{
+main .news{
     width: 1200px;
-    margin: 80px 160px;
+    margin: 0 auto;
 }
 
-.news-card{
+main .news .news-card{
     margin-top: 32px;
     padding: 48px;
     border-radius: 24px;
@@ -336,34 +372,33 @@ nav #signin-btn{
     gap: 32px;
 }
 
-.news-card .n-left img{
+main .news .news-card .n-left img{
     border-radius: 24px;
 }
 
-.news-card .n-right img{
+main .news .news-card .n-right img{
     margin-bottom: 12px;
 }
 
-.news .n-right .news-title{
+main .news .n-right .news-title{
     font-size: 32px;
     font-weight: 700;
     color: rgba(14, 14, 14, 0.9);
     margin-bottom: 16px;
 }
 
-.news .n-right .n-desc{
+main .news .n-right .n-desc{
     font-size: 16px;
     font-weight: 400;
     color: rgba(14, 14, 14, 0.6);
     margin-bottom: 32px;
 }
 
-.news .n-right .n-date{
+main .news .n-right .n-date{
     margin-bottom: 12px;
 }
 
-
-.news .n-right .news-btn{
+main .news .n-right .news-btn{
     padding: 11px 22px;
     border-radius: 8px;
     background-color: #006A50;
@@ -372,25 +407,32 @@ nav #signin-btn{
     font-weight: 600;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Additional - to enhance the hover effect */
 }
 
-.news .n2{
+main .news .n-right .news-btn:hover{
+    background-color: #004f3a;
+    transform: scale(1.05);
+}
+
+
+main .news .n2{
     display: flex;
     flex-direction: row-reverse;
 }
 
 /* Donate Section */
 
-.donate{
+main .donate{
     width: 1200px;
-    margin: 80px 160px;
+    margin: 0 auto;
 }
 
-.donate .d1{
+main .donate .d1{
     text-align: center;
 }
 
-.donate .donate-card-container{
+main .donate .donate-card-container{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -398,7 +440,7 @@ nav #signin-btn{
     margin: 32px 0;
 }
 
-.donate .donate-card-container .d-card{
+main .donate .donate-card-container .d-card{
     padding: 25px 5px;
     border-radius: 16px;
     border: 1px solid rgba(14, 14, 14, 0.15);
@@ -410,11 +452,11 @@ nav #signin-btn{
     width: 230px;
 }
 
-.donate .donate-card-container .d-card:hover{
+main .donate .donate-card-container .d-card:hover{
     background-color: #C6E4D6;
 }
 
-.donate .donate-bottom .d-btn{
+main .donate .donate-bottom .d-btn{
     border: 1px solid rgba(14, 14, 14, 0.1);
     border-radius: 8px;
     background: rgb(0, 106, 80);
@@ -423,9 +465,16 @@ nav #signin-btn{
     padding: 11px 25px;
     color: white;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 80px;
 }
 
-.donate .donate-bottom{
+main .donate .donate-bottom .d-btn:hover{
+    background-color: #004f3a;
+    transform: scale(1.05);
+}
+
+main .donate .donate-bottom{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -433,7 +482,7 @@ nav #signin-btn{
     gap: 32px;
 }
 
-.donate .donate-bottom #amount{
+main .donate .donate-bottom #amount{
     width: 85%;
     padding: 20px;
     outline: none;
@@ -446,12 +495,12 @@ nav #signin-btn{
 
 /* Newsletter Section */
 
-.newsletter{
+main .newsletter{
     width: 1200px;
-    margin: 80px 160px;
+    margin: 0 auto;
 }
 
-.newsletter .newsletter-container{
+main .newsletter .newsletter-container{
     background-color: #C6E4D6;
     padding: 80px 100px;
     border-radius: 24px;
@@ -460,28 +509,29 @@ nav #signin-btn{
     justify-content: center;
     align-items: center;
     gap: 16px;
+    margin-bottom: 80px;
 }
 
-.newsletter .newsletter-container .nw-title{
+main .newsletter .newsletter-container .nw-title{
     font-size: 40px;
     font-weight: 700;
     color: rgb(14, 14, 14);
 }
 
-.newsletter .newsletter-container .nw-desc{
+main .newsletter .newsletter-container .nw-desc{
     font-size: 16px;
     font-weight: 400;
     color: rgba(14, 14, 14, 0.6);
 }
 
-.newsletter .newsletter-container .form-group{
+main .newsletter .newsletter-container .form-group{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 700px;
 }
 
-.newsletter .newsletter-container .form-group input{
+main .newsletter .newsletter-container .form-group input{
     padding: 12px 17px;
     outline: none;
     border: none;
@@ -493,7 +543,7 @@ nav #signin-btn{
 }
 
 
-.newsletter .newsletter-container .form-group .news-l-btn{
+main .newsletter .newsletter-container .form-group .news-l-btn{
     padding: 11px 17px;
     background-color: #006A50;
     color: white;
@@ -503,17 +553,28 @@ nav #signin-btn{
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+main .newsletter .newsletter-container .form-group .news-l-btn:hover{
+    background-color: #004f3a;
+    transform: scale(1.05);
 }
 
 /** Footer **/
 
 footer{
+    background-color: white;
+}
+
+footer .footer-container{
     width: 1200px;
-    margin: 50px 160px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 50px;
 }
 
 footer .footer-text{
@@ -535,4 +596,12 @@ footer .social-container{
     justify-content: center;
     align-items: center;
     gap: 23px;
+}
+
+footer .social-container img{
+    transition: transform 0.2s ease;
+}
+
+footer .social-container img:hover{
+    transform: scale(1.3);
 }
