@@ -452,8 +452,13 @@ main .donate .donate-card-container .d-card{
     width: 230px;
 }
 
-main .donate .donate-card-container .d-card:hover{
+main .donate .donate-card-container .ini-selected{
     background-color: #C6E4D6;
+}
+
+
+main .donate .donate-card-container .d-card:hover{
+    background-color: rgba(241, 100, 241, 0.712);
 }
 
 main .donate .donate-bottom .d-btn{
